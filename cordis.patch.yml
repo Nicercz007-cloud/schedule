@@ -1,0 +1,7 @@
+# schedule bundle patch: registers the floating desktop widgets
+# (每日时间安排 / 目标设置 / 日期规划) as a cordis bundle. The three widgets are
+# rendered entirely in the browser half (client.js) as vanilla-DOM floating
+# windows, so the host half (lib/index.js) is a safe no-op that never throws.
+- insert:
+    - id: desktop-widgets
+      name: 'schedule'
