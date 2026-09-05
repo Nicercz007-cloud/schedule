@@ -58,8 +58,9 @@ _时间安排 · 目标追踪 · 日期规划 —— 一个插件，铺满你的
 
 ### 方式一：从 tgz 安装（推荐）
 
+从 [Releases](https://github.com/Nicercz007-cloud/schedule/releases) 下载 `schedule-x.y.z.tgz` 后：
+
 ```bash
-# 从 GitHub Release 下载 schedule-x.y.z.tgz 后：
 dsh install ./schedule-0.16.5.tgz
 ```
 
@@ -75,11 +76,14 @@ cp -r /tmp/package ~/.dsh/profiles/desktop/node_modules/schedule
 ### 方式二：从源码
 
 ```bash
-git clone https://github.com/<你的用户名>/schedule.git
+git clone https://github.com/Nicercz007-cloud/schedule.git
+mkdir -p ~/.dsh/local-plugins ~/.dsh/profiles/desktop/node_modules
 cp -r schedule ~/.dsh/local-plugins/
 cp -r schedule ~/.dsh/profiles/desktop/node_modules/
 ```
 
+> 💡 两条 `cp` 缺一不可：`local-plugins` 是插件注册目录，`profiles/desktop/node_modules` 是 DSH Desktop 实际加载的运行副本。
+> 💡 Windows 用户请用 **Git Bash** 执行上述命令（`~` 即 `C:\Users\<你>`）；或者直接用资源管理器把 `schedule` 文件夹分别复制进这两个目录。
 > ⚠️ 安装后请**完全重启 DSH Desktop** 生效。
 
 ## 🗂 项目结构
