@@ -14,7 +14,9 @@
       "dsh": ">=0.1.2-alpha.3"
     },
     "bundle": {
-      "patch": "./cordis.patch.yml"
+      "patch": "./cordis.patch.yml",
+      "id": "schedule",
+      "name": "Schedule Widgets"
     },
     "client": {
       "inject": [],
