@@ -8,7 +8,7 @@
 
 _时间安排 · 目标追踪 · 日期规划 —— 一个插件，铺满你的桌面_
 
-![version](https://img.shields.io/badge/版本-0.16.5-4F8CC9?style=flat-square)
+![version](https://img.shields.io/badge/版本-0.16.6-4F8CC9?style=flat-square)
 ![license](https://img.shields.io/badge/License-MIT-3FB950?style=flat-square)
 ![platform](https://img.shields.io/badge/平台-DSH%20Desktop-1F2328?style=flat-square)
 ![deps](https://img.shields.io/badge/依赖-0-success?style=flat-square)
@@ -20,18 +20,20 @@ _时间安排 · 目标追踪 · 日期规划 —— 一个插件，铺满你的
 > 纯前端 vanilla DOM 实现，**零依赖**，localStorage 持久化。
 > 三张卡片均可拖动、任意缩放、自动记忆位置，明暗主题自动跟随桌面壁纸。
 
+> **English**: A pure vanilla-DOM DSH Desktop widget suite with **zero dependencies**. Three draggable, resizable, position-remembering floating cards — daily schedule, goal tracker with freeform flowchart workspace, and calendar planner — all persisted via localStorage and auto-adapting between light/dark themes.
+
 ## ✨ 三个模块
 
 | 模块 | 一句话介绍 |
 | --- | --- |
-| 🗓 **每日时间安排** | 写一次长期生效的日程：事项 + 起止时间 + 周期（每天 / 工作日 / 周末 / 单次） |
+| 🗓 **每日时间安排** | 写一次长期生效的日程：事项 + 起止时间 + 周期（每天 / 工作日 / 周末） |
 | 🎯 **目标设置** | 一行一个目标的条状数据行，进度直接点数字改；📊 展开自由流程图工作台 |
 | 📆 **日期规划** | 月历视图的跨天任务：从某天到某天，彩色任务条铺满每一天 |
 
 ### 🗓 每日时间安排
 
 - 每行布局：**事项（左）· 起止时间段（右，上下堆叠）· 周期下拉 · 删除**
-- **周期**：每天 / 工作日 / 周末 / 单次 —— 写一次长期生效，当天不生效的行半透明显示
+- **周期**：每天 / 工作日 / 周末 —— 写一次长期生效，当天不生效的行半透明显示
 - 首次使用自动注入一日模板；旧版本数据自动迁移
 - 内置倒计时便签（重要日期倒数：天 + 时 : 分 : 秒）
 
@@ -61,14 +63,14 @@ _时间安排 · 目标追踪 · 日期规划 —— 一个插件，铺满你的
 从 [Releases](https://github.com/Nicercz007-cloud/schedule/releases) 下载 `schedule-x.y.z.tgz` 后：
 
 ```bash
-dsh install ./schedule-0.16.5.tgz
+dsh plugin add ./schedule-0.16.6.tgz
 ```
 
 或者手动解压到 DSH 的插件目录：
 
 ```bash
 # 1. 源目录
-unzip schedule-0.16.5.tgz -d /tmp && cp -r /tmp/package ~/.dsh/local-plugins/schedule
+unzip schedule-0.16.6.tgz -d /tmp && cp -r /tmp/package ~/.dsh/local-plugins/schedule
 # 2. 运行目录（重要 —— DSH Desktop 实际从 profiles/desktop 加载）
 cp -r /tmp/package ~/.dsh/profiles/desktop/node_modules/schedule
 ```
@@ -108,7 +110,8 @@ docs/              截图
 
 | 版本 | 变更 |
 | --- | --- |
-| **0.16.5** | 目标进度统一为百分比显示 |
+| **0.16.6** | 移除内嵌第三方壁纸（base64）并修复体积/版权问题；去掉未实现的「单次」周期选项；安装命令改用 `dsh plugin add` |
+| 0.16.5 | 目标进度统一为百分比显示 |
 | 0.16.4 | 目标卡片改为条状数据行、整体缩小；修复事项与时间段重叠 |
 | 0.16.3 | 目标卡片竖排网格；修复重叠（`box-sizing:border-box`） |
 | 0.16.2 | 目标进度改为方块式分段显示 |
