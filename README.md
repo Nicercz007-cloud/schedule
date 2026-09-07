@@ -8,7 +8,7 @@
 
 _时间安排 · 目标追踪 · 日期规划 —— 一个插件，铺满你的桌面_
 
-![version](https://img.shields.io/badge/版本-0.16.6-4F8CC9?style=flat-square)
+![version](https://img.shields.io/badge/版本-0.16.7-4F8CC9?style=flat-square)
 ![license](https://img.shields.io/badge/License-MIT-3FB950?style=flat-square)
 ![platform](https://img.shields.io/badge/平台-DSH%20Desktop-1F2328?style=flat-square)
 ![deps](https://img.shields.io/badge/依赖-0-success?style=flat-square)
@@ -63,14 +63,14 @@ _时间安排 · 目标追踪 · 日期规划 —— 一个插件，铺满你的
 从 [Releases](https://github.com/Nicercz007-cloud/schedule/releases) 下载 `schedule-x.y.z.tgz` 后：
 
 ```bash
-dsh plugin add ./schedule-0.16.6.tgz
+dsh plugin add ./schedule-0.16.7.tgz
 ```
 
 或者手动解压到 DSH 的插件目录：
 
 ```bash
 # 1. 源目录
-unzip schedule-0.16.6.tgz -d /tmp && cp -r /tmp/package ~/.dsh/local-plugins/schedule
+unzip schedule-0.16.7.tgz -d /tmp && cp -r /tmp/package ~/.dsh/local-plugins/schedule
 # 2. 运行目录（重要 —— DSH Desktop 实际从 profiles/desktop 加载）
 cp -r /tmp/package ~/.dsh/profiles/desktop/node_modules/schedule
 ```
@@ -110,7 +110,8 @@ docs/              截图
 
 | 版本 | 变更 |
 | --- | --- |
-| **0.16.6** | 移除内嵌第三方壁纸（base64）并修复体积/版权问题；去掉未实现的「单次」周期选项；安装命令改用 `dsh plugin add` |
+| **0.16.7** | 流程图新增「缩小停靠」：⇥/←/Esc 后项目树大纲挂在目标卡片右侧（点击展开，× 移除，重启保留）；修复旧目标无 id 导致流程图状态持久化静默失效（数据自愈） |
+| 0.16.6 | 移除内嵌第三方壁纸（base64）并修复体积/版权问题；去掉未实现的「单次」周期选项；安装命令改用 `dsh plugin add` |
 | 0.16.5 | 目标进度统一为百分比显示 |
 | 0.16.4 | 目标卡片改为条状数据行、整体缩小；修复事项与时间段重叠 |
 | 0.16.3 | 目标卡片竖排网格；修复重叠（`box-sizing:border-box`） |
