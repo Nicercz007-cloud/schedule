@@ -1,7 +1,7 @@
 {
   "name": "schedule",
   "description": "DSH Desktop 桌面小组件：每日时间安排（周期重复 + 起止时间 + 倒计时便签）、目标设置（进度百分比 + 自由流程图工作台）、日期规划（跨天任务月历）三个可拖动、可缩放、自动记忆位置的悬浮卡片。纯前端 vanilla DOM 实现，localStorage 持久化，零依赖。",
-  "version": "0.16.6",
+  "version": "0.16.7",
   "author": "Nicercz007-cloud",
   "homepage": "https://github.com/Nicercz007-cloud/schedule#readme",
   "repository": {
